@@ -1,18 +1,18 @@
- @extends('apps.userlayout')
+ @extends('apps.adminlayout')
  @section('sectionheader')
  <h1>
    Dashboard |
-   <small>Borrowing History</small>
+   <small>List User</small>
  </h1>
  <ol class="breadcrumb">
-   <li><a href="#"><i class="fa fa-dashboard"></i>Book</a></li>
-   <li class="active">Borrowing History</li>
+   <li><a href="#"><i class="fa fa-dashboard"></i>User</a></li>
+   <li class="active">List User</li>
  </ol>
  @endsection
  @section('content')
  <div class="box">
    <div class="box-header">
-     <h3 class="box-title">Borrowing History</h3>
+     <h3 class="box-title">List User</h3>
    </div>
    <!-- /.box-header -->
    <div class="box-body">
@@ -26,11 +26,16 @@
            <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
              <thead>
                <tr role="row">
-                 <th>No</th>
-                 <th>Book Name</th>
-                 <th>Author</th>
+                 <th>ID User</th>
+                 <th>User Name</th>
+                 <th>Born Place</th>
+                 <th>Born Date</th>
                  <th>Borrowed Date</th>
-                 <th>Return Date</th>
+                 <th>Address</th>
+                 <th>Phone Number</th>
+                 <th>Email</th>
+                 <th>Created By</th>
+                 <th>Created At</th>
                </tr>
              </thead>
              <tbody>
@@ -38,7 +43,13 @@
                  <td>Gecko</td>
                  <td>Firefox 1.0</td>
                  <td>Win 98+ / OSX.2+</td>
-                 <td>1.7</td>
+                 <td>Win 98+ / OSX.2+</td>
+                 <td>Win 98+ / OSX.2+</td>
+                 <td>Win 98+ / OSX.2+</td>
+                 <td>Win 98+ / OSX.2+</td>
+                 <td>Win 98+ / OSX.2+</td>
+                 <td>Gecko</td>
+                 <td>Firefox 1.0</td>
                </tr>
            </table>
          </div>

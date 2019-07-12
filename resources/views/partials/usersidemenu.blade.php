@@ -7,7 +7,7 @@
       </div>
       <div class="pull-left info">
         <p>Alexander Pierce</p>
-        <a>Online</a>
+        <a>USER</a>
       </div>
     </div>
     <!-- /.search form -->

@@ -1,4 +1,4 @@
- @extends('apps.layout')
+ @extends('apps.userlayout')
  @section('sectionheader')
  <h1>
    Dashboard |

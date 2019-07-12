@@ -24,7 +24,7 @@
        <div class="form-group">
          <label>Gender</label>
          <select class="form-control">
-         <option>Chose Gender</option>
+           <option>Chose Gender</option>
            <option>Male</option>
            <option>Female</option>
          </select>
@@ -61,6 +61,11 @@
        <div class="form-group">
          <label>Email</label>
          <input type="text" class="form-control" placeholder="Enter Email">
+       </div>
+
+       <div class="form-group">
+         <label>Phone Number</label>
+         <input type="text" class="form-control" placeholder="Enter Phone Number">
        </div>
 
        <div class="form-group">

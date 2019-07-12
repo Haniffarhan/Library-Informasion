@@ -40,7 +40,7 @@ Route::get('/input-borrow', 'AdminController@inputborrow')->name('admin.inputbor
 Route::get('/list-borrow', 'AdminController@listborrow')->name('admin.listborrow');
 
 Route::get('/', function () {
-    return view('pages.admin.profile.profileuser');
+    return view('pages.login.login');
 });
 
 Auth::routes();

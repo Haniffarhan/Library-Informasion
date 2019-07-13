@@ -15,68 +15,69 @@
      <h3 class="box-title">Input User Form</h3>
    </div>
    <div class="box-body">
-     <form role="form">
+     <form role="form" method="post" action="{{ route('admin.inputuser') }}">
+       @csrf
        <div class="form-group">
          <label>Name</label>
-         <input type="text" class="form-control" placeholder="Enter Name">
+         <input type="text" class="form-control" name="name">
        </div>
 
        <div class="form-group">
          <label>Gender</label>
          <select class="form-control">
-           <option>Chose Gender</option>
-           <option>Male</option>
-           <option>Female</option>
+           <option value="Male">Male</option>
+           <option value="Female">Female</option>
          </select>
        </div>
 
        <div class="form-group">
          <label>Born Place</label>
-         <input type="text" class="form-control" placeholder="Enter Born Place">
+         <input type="text" class="form-control" name="born_place">
        </div>
 
        <div class="form-group">
          <label>Born Date</label>
-         <select class="form-control">
+         <select class="form-control" name="born_date_day">
            <option>Day</option>
-           @for ($i = 1; $i < 32; $i++)<option>{{ $i }}</option>@endfor
+           @for ($day = 1; $day < 32; $day++)<option value="{{ $day }}">{{ $day }}</option>@endfor
          </select>
          <br>
-         <select class="form-control">
+         <select class="form-control" name="born_date_month">
            <option>Month</option>
-           @for ($i = 1; $i < 13; $i++)<option>{{ $i }}</option>@endfor
+           @for ($month = 1; $month < 13; $month++)<option value="{{ $month }}">{{ $month }}</option>@endfor
          </select>
          <br>
-         <select class="form-control">
+         <select class="form-control" name="born_date_year">
            <option>Year</option>
-           @for ($i = 1990; $i < 2026; $i++)<option>{{ $i }}</option>@endfor
+           @for ($year = 1990; $year < 2026; $year++)<option  value="{{ $year }}">{{ $year }}</option>@endfor
          </select>
        </div>
 
        <div class="form-group">
          <label>Address</label>
-         <textarea class="form-control" rows="3" placeholder="Enter Address"></textarea>
+         <textarea class="form-control" rows="3"  name="address"></textarea>
        </div>
 
        <div class="form-group">
          <label>Email</label>
-         <input type="text" class="form-control" placeholder="Enter Email">
+         <input type="text" class="form-control"  name="email">
        </div>
 
        <div class="form-group">
          <label>Phone Number</label>
-         <input type="text" class="form-control" placeholder="Enter Phone Number">
+         <input type="text" class="form-control"  name="phone_number">
        </div>
 
        <div class="form-group">
          <label>Role</label>
          <select class="form-control">
-           <option>Chose Role</option>
-           <option>User</option>
-           <option>Admin</option>
-           <option>Head Staff</option>
+           <option value="3">User</option>
+           <option value="1">Admin</option>
+           <option value="2">Head Staff</option>
          </select>
        </div>
+
+       <button type="submit" class="btn btn-primary">SAVE</button>
 
      </form>
    </div>

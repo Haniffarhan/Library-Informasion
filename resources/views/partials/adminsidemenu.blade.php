@@ -3,7 +3,7 @@
     <!-- Sidebar user panel -->
     <div class="user-panel">
       <div class="pull-left image">
-        <img src="logo.png" class="img-circle" alt="User Image">
+        <img src="{{asset('logo.png')}}" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
         <p>Alexander Pierce</p>
@@ -34,7 +34,7 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="{{ route('admin.inputuser')}}"><i class="fa fa-circle-o"></i> Input User</a></li>
+          <li><a href="{{ route('admin.forminputuser')}}"><i class="fa fa-circle-o"></i> Input User</a></li>
           <li><a href="{{ route('admin.listuser')}}"><i class="fa fa-circle-o"></i> List User</a></li>
         </ul>
       </li>

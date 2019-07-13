@@ -37,7 +37,7 @@
                  <th>Email</th>
                  <th>Phone Number</th>
                  <th>ID Role</th>
-                 
+
                </tr>
              </thead>
              <tbody>
@@ -54,9 +54,10 @@
                  <td>{{ $p->email }}</td>
                  <td>{{ $p->phone_number }}</td>
                  <td>{{ $p->id_role }}</td>
-                 
+
                </tr>
                @endforeach
+             </tbody>
            </table>
          </div>
        </div>

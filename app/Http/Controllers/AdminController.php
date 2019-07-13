@@ -58,7 +58,8 @@ class AdminController extends Controller
 
     public function listbook()
     {
-        return view('pages.admin.book.listbook');
+        $books = DB::table('books')->get();
+        return view('pages.admin.book.listbook', ['books' => $books]);
     }
 
     public function inputborrow()
@@ -68,6 +69,7 @@ class AdminController extends Controller
 
     public function listborrow()
     {
-        return view('pages.admin.borrow.listborrow');
+        $borrows = DB::table('borrows')->get();
+        return view('pages.admin.borrow.listborrow', ['borrows' => $borrows]);
     }
 }

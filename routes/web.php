@@ -36,9 +36,11 @@ Route::post('/admin/input-user', 'AdminController@inputuser')->name('admin.input
 Route::get('/admin/list-user', 'AdminController@listuser')->name('admin.listuser');
 
 Route::get('/admin/input-book', 'AdminController@inputbook')->name('admin.inputbook');
+
 Route::get('/admin/list-book', 'AdminController@listbook')->name('admin.listbook');
 
 Route::get('/admin/input-borrow', 'AdminController@inputborrow')->name('admin.inputborrow');
+
 Route::get('/admin/list-borrow', 'AdminController@listborrow')->name('admin.listborrow');
 
 Route::get('/', function () {

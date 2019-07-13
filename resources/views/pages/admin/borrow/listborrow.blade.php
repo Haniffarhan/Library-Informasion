@@ -24,29 +24,26 @@
        <div class="row">
          <div class="col-sm-12">
            <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
-             <thead>
+           <thead>
                <tr role="row">
                  <th>ID Borrow</th>
-                 <th>Book Name</th>
-                 <th>Author</th>
-                 <th>User Name</th>
+                 <th>ID Book</th>
+                 <th>ID User</th>
                  <th>Borrow Date</th>
                  <th>Return Date</th>
-                 <th>Created By</th>
-                 <th>Created At</th>
                </tr>
              </thead>
              <tbody>
+               @foreach($borrows as $p)
                <tr>
-                 <td>Gecko</td>
-                 <td>Firefox 1.0</td>
-                 <td>Win 98+ / OSX.2+</td>
-                 <td>Win 98+ / OSX.2+</td>
-                 <td>Win 98+ / OSX.2+</td>
-                 <td>Win 98+ / OSX.2+</td>
-                 <td>Win 98+ / OSX.2+</td>
-                 <td>Win 98+ / OSX.2+</td>
+                 <td>{{ $p->id_borrow }}</td>
+                 <td>{{ $p->id_book }}</td>
+                 <td>{{ $p->id_user }}</td>
+                 <td>{{ $p->borrow_date }}</td>
+                 <td>{{ $p->return_date }}</td>
                </tr>
+               @endforeach
+             </tbody>
            </table>
          </div>
        </div>

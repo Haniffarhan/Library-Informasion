@@ -17,8 +17,12 @@ class CreateBorrowsTable extends Migration
             $table->bigIncrements('id_borrow');
             $table->unsignedBigInteger('id_book')->unsigned();
             $table->unsignedBigInteger('id_user')->unsigned();
-            $table->string('borrow_date');
-            $table->string('return_date');
+            $table->string('borrow_date_day');
+            $table->string('borrow_date_month');
+            $table->string('borrow_date_year');
+            $table->string('return_date_day');
+            $table->string('return_date_month');
+            $table->string('return_date_year');
             $table->timestamps();
         });
     }

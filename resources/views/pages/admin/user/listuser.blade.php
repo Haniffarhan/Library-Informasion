@@ -37,6 +37,7 @@
                  <th>Email</th>
                  <th>Phone Number</th>
                  <th>ID Role</th>
+                 <th>Option</th>
 
                </tr>
              </thead>
@@ -54,6 +55,11 @@
                  <td>{{ $p->email }}</td>
                  <td>{{ $p->phone_number }}</td>
                  <td>{{ $p->id_role }}</td>
+                 <td>
+                   <a class="btn btn-warning" href="#/Edit">Edit</a>
+                   |
+                   <a  class="btn btn-danger" href="#/Delete">Delete</a>
+                 </td>
 
                </tr>
                @endforeach

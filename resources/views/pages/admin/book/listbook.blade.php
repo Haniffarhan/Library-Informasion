@@ -27,20 +27,26 @@
              <thead>
                <tr role="row">
                  <th>ID Book</th>
-                 <th>Book Name</th>
+                 <th>Book Title</th>
                  <th>Author</th>
                  <th>Publisher</th>
                  <th>Description</th>
+                 <th>Option</th>
                </tr>
              </thead>
              <tbody>
                @foreach($books as $p)
                <tr>
                  <td>{{ $p->id_book }}</td>
-                 <td>{{ $p->book_name }}</td>
+                 <td>{{ $p->book_title }}</td>
                  <td>{{ $p->author }}</td>
                  <td>{{ $p->publisher }}</td>
                  <td>{{ $p->description }}</td>
+                 <td>
+                   <a class="btn btn-warning" href="#/Edit">Edit</a>
+                   |
+                   <a  class="btn btn-danger" href="#/Delete">Delete</a>
+                 </td>
                </tr>
                @endforeach
              </tbody>

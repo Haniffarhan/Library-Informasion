@@ -25,24 +25,21 @@ class AdminController extends Controller
 
     public function inputuser(Request $request)
     {
-        $validatedData = $request->validate([
-            'name' => 'required|max:255',
-            'gender' => 'required|alpha_num',
-            'born_place' => 'required|max:255',
-            'born_date_day' => 'required|alpha_num',
-            'born_date_month' => 'required|alpha_num',
-            'born_date_year' => 'required|alpha_num',
-            'address' => 'required|max:255',
-            'email' => 'required|max:255',
-            'phone_number' => 'required|max:255',
-            'id_role' => 'required|alpha_num',
-            'book_price' => 'required|numeric',
+        DB::table('users')->insert([
+            'name' => $request->name,
+            'gender' => $request->gender,
+            'born_place' => $request->born_place,
+            'born_date_day' => $request->born_date_day,
+            'born_date_month' => $request->born_date_month,
+            'born_date_year' => $request->born_date_year,
+            'address' => $request->address,
+            'email' => $request->email,
+            'phone_number' => $request->phone_number,
+            'id_role' => $request->id_role,
+            'password' => bcrypt($request->phone_number),
         ]);
-        $user = User::create($validatedData);
-   
-        return redirect('admin.inputuser')->with('success', 'User is successfully saved');
 
-        // return view('pages.admin.user.inputuser');
+        return redirect('/admin/list-user');
     }
 
     public function listuser()
@@ -51,9 +48,21 @@ class AdminController extends Controller
         return view('pages.admin.user.listuser', ['users' => $users]);
     }
 
-    public function inputbook()
+    public function forminputbook()
     {
         return view('pages.admin.book.inputbook');
+    }
+
+    public function inputbook(Request $request)
+    {
+        DB::table('books')->insert([
+            'book_name' => $request->book_name,
+            'author' => $request->author,
+            'publisher' => $request->publisher,
+            'description' => $request->description,
+        ]);
+
+        return redirect('/admin/list-book');
     }
 
     public function listbook()
@@ -62,9 +71,25 @@ class AdminController extends Controller
         return view('pages.admin.book.listbook', ['books' => $books]);
     }
 
-    public function inputborrow()
+    public function forminputborrow()
     {
         return view('pages.admin.borrow.inputborrow');
+    }
+
+    public function inputborrow(Request $request)
+    {
+        DB::table('borrows')->insert([
+            'id_book' => $request->id_book,
+            'id_user' => $request->id_user,
+            'borrow_date_day' => $request->borrow_date_day,
+            'borrow_date_month' => $request->borrow_date_month,
+            'borrow_date_year' => $request->borrow_date_year,
+            'return_date_day' => $request->return_date_day,
+            'return_date_month' => $request->return_date_month,
+            'return_date_year' => $request->return_date_year,
+        ]);
+
+        return redirect('/admin/list-borrow');
     }
 
     public function listborrow()

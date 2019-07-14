@@ -39,8 +39,8 @@
                  <td>{{ $p->id_borrow }}</td>
                  <td>{{ $p->id_book }}</td>
                  <td>{{ $p->id_user }}</td>
-                 <td>{{ $p->borrow_date }}</td>
-                 <td>{{ $p->return_date }}</td>
+                 <td>{{ $p->borrow_date_year }} / {{ $p->borrow_date_month }} / {{ $p->borrow_date_day }}</td>
+                 <td>{{ $p->return_date_year }} / {{ $p->return_date_month }} / {{ $p->return_date_day }}</td>
                </tr>
                @endforeach
              </tbody>

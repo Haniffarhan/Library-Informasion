@@ -18,10 +18,10 @@ class BooksTableSeeder extends Seeder
 
             DB::table('books')->insert([
                 'id_book' => $i,
-                'book_name' => $faker->name,
+                'book_title' => $faker->name,
                 'author' => $faker->name,
                 'publisher' => $faker->company,
-                'description' => $faker->word,
+                'description' => $faker->text($maxNbChars = 200) ,
             ]);
         }
     }

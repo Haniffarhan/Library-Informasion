@@ -24,7 +24,7 @@
 
        <div class="form-group">
          <label>Gender</label>
-         <select class="form-control">
+         <select class="form-control"  name="gender">
            <option value="Male">Male</option>
            <option value="Female">Female</option>
          </select>
@@ -70,7 +70,7 @@
 
        <div class="form-group">
          <label>Role</label>
-         <select class="form-control">
+         <select class="form-control"  name="id_role">
            <option value="3">User</option>
            <option value="1">Admin</option>
            <option value="2">Head Staff</option>

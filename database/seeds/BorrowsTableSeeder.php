@@ -20,8 +20,12 @@ class BorrowsTableSeeder extends Seeder
                 'id_borrow' => $i,
                 'id_book' => $i,
                 'id_user' => $i,
-                'borrow_date' => $faker->date($format = 'Y-m-d', $max = 'now'),
-                'return_date' => $faker->date($format = 'Y-m-d', $max = 'now'),
+                'borrow_date_day' => $faker->numberBetween(1, 31),
+                'borrow_date_month' => $faker->numberBetween(1, 12),
+                'borrow_date_year' => $faker->numberBetween(1980, 2019),
+                'return_date_day' => $faker->numberBetween(1, 31),
+                'return_date_month' => $faker->numberBetween(1, 12),
+                'return_date_year' => $faker->numberBetween(1980, 2019),
             ]);
         }
     }

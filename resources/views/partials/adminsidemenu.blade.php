@@ -46,7 +46,7 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="{{ route('admin.inputbook')}}"><i class="fa fa-circle-o"></i> Input Book</a></li>
+          <li><a href="{{ route('admin.forminputbook')}}"><i class="fa fa-circle-o"></i> Input Book</a></li>
           <li><a href="{{ route('admin.listbook')}}"><i class="fa fa-circle-o"></i> List Book</a></li>
         </ul>
       </li>
@@ -58,7 +58,7 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="{{ route('admin.inputborrow')}}"><i class="fa fa-circle-o"></i> Input Borrowing</a></li>
+          <li><a href="{{ route('admin.forminputborrow')}}"><i class="fa fa-circle-o"></i> Input Borrowing</a></li>
           <li><a href="{{ route('admin.listborrow')}}"><i class="fa fa-circle-o"></i> List Borrowing</a></li>
         </ul>
       </li>

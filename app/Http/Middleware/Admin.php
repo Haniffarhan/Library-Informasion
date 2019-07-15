@@ -14,35 +14,21 @@ class Admin
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next, $id_role='')
+    public function handle($request, Closure $next)
     {
-        $userRole=$request->user();
-
-        if($userRole && $userRole->count()>0)
-        {
-            $userRole=$userRole->id_role;
-            $checkRole=0;
-            if($userRole==$id_role && $id_role=='1')
-            {
-                $checkRole=1;
-            }
-            elseif($userRole==$id_role && $id_role=='2')
-            {
-                $checkRole=1;
-            }
-            elseif($userRole==$id_role && $id_role=='3')
-            {
-                $checkRole=1;
-            }
-            
-            if($checkRole==1)
+        switch (Auth::user()->id_role) {
+            case 1:
                 return $next($request);
-            else
-               return abort(403);
-        }
-        else
-        {
-            return $next($request);
+                break;
+            case 2:
+                return abort(403);
+                break;
+            case 3:
+                return abort(403);
+                break;
+            default:
+                $this->redirectTo = '/login';
+                return $this->redirectTo;
         }
     }
 }

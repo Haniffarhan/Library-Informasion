@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        switch (Auth::user()->id_role) {
+            case 1:
+                return view('pages.admin.profile.profileuser');
+                break;
+            case 2:
+                return view('pages.headstaff.profile.profileuser');
+                break;
+            case 3:
+                return view('pages.user.profile.profileuser');
+                break;
+            default:
+                $this->redirectTo = '/login';
+                return $this->redirectTo;
+        }
     }
 }

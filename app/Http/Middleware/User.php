@@ -14,23 +14,23 @@ class User
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next, $role='')
+    public function handle($request, Closure $next, $id_role='')
     {
         $userRole=$request->user();
 
         if($userRole && $userRole->count()>0)
         {
-            $userRole=$userRole->role;
+            $userRole=$userRole->id_role;
             $checkRole=0;
-            if($userRole==$role && $role=='1')
+            if($userRole==$id_role && $id_role=='1')
             {
                 $checkRole=1;
             }
-            elseif($userRole==$role && $role=='2')
+            elseif($userRole==$id_role && $id_role=='2')
             {
                 $checkRole=1;
             }
-            elseif($userRole==$role && $role=='3')
+            elseif($userRole==$id_role && $id_role=='3')
             {
                 $checkRole=1;
             }

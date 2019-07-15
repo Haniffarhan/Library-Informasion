@@ -34,10 +34,15 @@ Route::get('/headstaff/borrow-report', 'HeadStaffController@borrowreport')->name
 Route::get('/admin/profile', 'AdminController@profile')->name('admin.profile')->middleware('admin');
 Route::get('/admin/change-password', 'AdminController@change')->name('admin.change')->middleware('admin');
 
+/*User Dropdown*/
+
 Route::get('/admin/form-input-user', 'AdminController@forminputuser')->name('admin.forminputuser')->middleware('admin');
 Route::post('/admin/input-user', 'AdminController@inputuser')->name('admin.inputuser')->middleware('admin');
-
 Route::get('/admin/list-user', 'AdminController@listuser')->name('admin.listuser')->middleware('admin');
+Route::get('/admin/edit-user/{id_user}', 'AdminController@edituser')->name('admin.edituser')->middleware('admin');
+Route::put('/admin/update-user/{id_user}', 'AdminController@updateuser')->name('admin.updateuser')->middleware('admin');
+
+/*End User Dropdown*/
 
 Route::get('/admin/form-input-book', 'AdminController@forminputbook')->name('admin.forminputbook')->middleware('admin');
 Route::post('/admin/input-book', 'AdminController@inputbook')->name('admin.inputbook')->middleware('admin');

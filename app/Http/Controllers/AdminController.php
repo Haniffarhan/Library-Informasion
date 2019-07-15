@@ -10,13 +10,16 @@ class AdminController extends Controller
 {
     public function profile()
     {
-        return view('pages.admin.profile.profileuser');
+        $users = DB::table('users')->get();
+        return view('pages.admin.profile.profileuser', ['users' => $users]);
     }
 
     public function change()
     {
         return view('pages.admin.profile.changepassword');
     }
+
+    /* User Dropdown */
 
     public function forminputuser()
     {
@@ -47,6 +50,44 @@ class AdminController extends Controller
         $users = DB::table('users')->get();
         return view('pages.admin.user.listuser', ['users' => $users]);
     }
+
+    public function edituser($id_user)
+    {
+        $users = User::find($id_user);
+        return view('pages.admin.user.edituser', ['users' => $users]);
+    }
+
+    public function updateuser($id_user, Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'gender' => 'required',
+            'born_place' => 'required',
+            'born_date_day' => 'required',
+            'born_date_month' => 'required',
+            'born_date_year' => 'required',
+            'address' => 'required',
+            'email' => 'required',
+            'phone_number' => 'required',
+            'id_role' => 'required',
+            'password' => 'required',
+        ]);
+
+        $users = User::find($id_user);
+        $users->name = $request->name;
+        $users->gender = $request->gender;
+        $users->born_place = $request->born_place;
+        $users->born_date_day = $request->born_date_day;
+        $users->born_date_month = $request->born_date_month;
+        $users->born_date_year = $request->born_date_year;
+        $users->address = $request->address;
+        $users->email = $request->email;
+        $users->phone_number = $request->phone_number;
+        $users->save();
+        return redirect('admin.listuser');
+    }
+
+    /* End User Dropdown */
 
     public function forminputbook()
     {

@@ -53,7 +53,7 @@ class UsersTableSeeder extends Seeder
             'address' => 'Jakarta',
             'email' => 'user@example.com',
             'phone_number' => '085258369147',
-            'id_role' => '2',
+            'id_role' => '3',
             'password' => bcrypt('user123')
         ]);
 

@@ -13,41 +13,41 @@
 
 //User
 Route::get('/user/profile', 'UserController@profile')->name('user.profile')->middleware('user');
-Route::get('/user/change-password', 'UserController@change')->name('user.change');
+Route::get('/user/change-password', 'UserController@change')->name('user.change')->middleware('user');
 
-Route::get('/user/borrowing', 'UserController@borrowing')->name('user.borrowing');
-Route::get('/user/borrowing-history', 'UserController@borrowinghistory')->name('user.borrowinghistory');
+Route::get('/user/borrowing', 'UserController@borrowing')->name('user.borrowing')->middleware('user');
+Route::get('/user/borrowing-history', 'UserController@borrowinghistory')->name('user.borrowinghistory')->middleware('user');
 
 /*---------------------------------------------------------------------------------------------------*/
 
 //Head Staff
 Route::get('/headstaff/profile', 'HeadStaffController@profile')->name('headstaff.profile')->middleware('headstaff');
-Route::get('/headstaff/change-password', 'HeadStaffController@change')->name('headstaff.change');
+Route::get('/headstaff/change-password', 'HeadStaffController@change')->name('headstaff.change')->middleware('headstaff');
 
-Route::get('/headstaff/user-report', 'HeadStaffController@userreport')->name('headstaff.user');
-Route::get('/headstaff/book-report', 'HeadStaffController@bookreport')->name('headstaff.book');
-Route::get('/headstaff/borrow-report', 'HeadStaffController@borrowreport')->name('headstaff.borrow');
+Route::get('/headstaff/user-report', 'HeadStaffController@userreport')->name('headstaff.user')->middleware('headstaff');
+Route::get('/headstaff/book-report', 'HeadStaffController@bookreport')->name('headstaff.book')->middleware('headstaff');
+Route::get('/headstaff/borrow-report', 'HeadStaffController@borrowreport')->name('headstaff.borrow')->middleware('headstaff');
 
 /*---------------------------------------------------------------------------------------------------*/
 
 //Admin
 Route::get('/admin/profile', 'AdminController@profile')->name('admin.profile')->middleware('admin');
-Route::get('/admin/change-password', 'AdminController@change')->name('admin.change');
+Route::get('/admin/change-password', 'AdminController@change')->name('admin.change')->middleware('admin');
 
-Route::get('/admin/form-input-user', 'AdminController@forminputuser')->name('admin.forminputuser');
-Route::post('/admin/input-user', 'AdminController@inputuser')->name('admin.inputuser');
+Route::get('/admin/form-input-user', 'AdminController@forminputuser')->name('admin.forminputuser')->middleware('admin');
+Route::post('/admin/input-user', 'AdminController@inputuser')->name('admin.inputuser')->middleware('admin');
 
-Route::get('/admin/list-user', 'AdminController@listuser')->name('admin.listuser');
+Route::get('/admin/list-user', 'AdminController@listuser')->name('admin.listuser')->middleware('admin');
 
-Route::get('/admin/form-input-book', 'AdminController@forminputbook')->name('admin.forminputbook');
-Route::post('/admin/input-book', 'AdminController@inputbook')->name('admin.inputbook');
+Route::get('/admin/form-input-book', 'AdminController@forminputbook')->name('admin.forminputbook')->middleware('admin');
+Route::post('/admin/input-book', 'AdminController@inputbook')->name('admin.inputbook')->middleware('admin');
 
-Route::get('/admin/list-book', 'AdminController@listbook')->name('admin.listbook');
+Route::get('/admin/list-book', 'AdminController@listbook')->name('admin.listbook')->middleware('admin');
 
-Route::get('/admin/form-input-borrow', 'AdminController@forminputborrow')->name('admin.forminputborrow');
-Route::post('/admin/input-borrow', 'AdminController@inputborrow')->name('admin.inputborrow');
+Route::get('/admin/form-input-borrow', 'AdminController@forminputborrow')->name('admin.forminputborrow')->middleware('admin');
+Route::post('/admin/input-borrow', 'AdminController@inputborrow')->name('admin.inputborrow')->middleware('admin');
 
-Route::get('/admin/list-borrow', 'AdminController@listborrow')->name('admin.listborrow');
+Route::get('/admin/list-borrow', 'AdminController@listborrow')->name('admin.listborrow')->middleware('admin');
 
 /*---------------------------------------------------------------------------------------------------*/
 

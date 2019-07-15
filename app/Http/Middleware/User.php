@@ -14,19 +14,35 @@ class User
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next)
+    public function handle($request, Closure $next, $role='')
     {
-        if (Auth::check() && Auth::user()->role == 1) {
-            return redirect()->route('admin.profile');
+        $userRole=$request->user();
+
+        if($userRole && $userRole->count()>0)
+        {
+            $userRole=$userRole->role;
+            $checkRole=0;
+            if($userRole==$role && $role=='1')
+            {
+                $checkRole=1;
+            }
+            elseif($userRole==$role && $role=='2')
+            {
+                $checkRole=1;
+            }
+            elseif($userRole==$role && $role=='3')
+            {
+                $checkRole=1;
+            }
+            
+            if($checkRole==1)
+                return $next($request);
+            else
+               return abort(403);
         }
-        elseif (Auth::check() && Auth::user()->role == 2) {
-            return redirect()->route('headstaff.profile');
-        }
-        elseif (Auth::check() && Auth::user()->role == 3) {
+        else
+        {
             return $next($request);
-        }
-        else {
-            return redirect()->route('/');
         }
     }
 }

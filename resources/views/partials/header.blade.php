@@ -22,7 +22,17 @@
               <i class="fa fa-gears"></i>
             </a>
             <ul class="dropdown-menu">
-              <li><a href="#"><i class="fa fa-sign-out"></i>Logout</a></li>
+              <!-- <li><a href="#"><i class="fa fa-sign-out"></i>Logout</a></li> -->
+              <li>
+                <a class="fa fa-sign-out" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}
+              </a>
+
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+              </form>
+            </li>
+              
             </ul>
       </div>
     </nav>

@@ -26,7 +26,8 @@ class HomeController extends Controller
     {
         switch (Auth::user()->id_role) {
             case 1:
-                return view('pages.admin.profile.profileuser');
+                $id_user = Auth::user()->id_user;
+                return redirect()->route('admin.profile', ['id_user' => $id_user]);
                 break;
             case 2:
                 return view('pages.headstaff.profile.profileuser');

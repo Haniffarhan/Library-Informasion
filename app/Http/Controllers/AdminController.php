@@ -8,10 +8,11 @@ use App\User;
 
 class AdminController extends Controller
 {
-    public function profile()
+    public function profile($id_user)
     {
-        $users = DB::table('users')->get();
+        $users = User::find($id_user);
         return view('pages.admin.profile.profileuser', ['users' => $users]);
+        // dd($users);
     }
 
     public function change()

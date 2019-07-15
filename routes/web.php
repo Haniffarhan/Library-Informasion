@@ -31,7 +31,7 @@ Route::get('/headstaff/borrow-report', 'HeadStaffController@borrowreport')->name
 /*---------------------------------------------------------------------------------------------------*/
 
 //Admin
-Route::get('/admin/profile', 'AdminController@profile')->name('admin.profile')->middleware('admin');
+Route::get('/admin/profile/{id_user}', 'AdminController@profile')->name('admin.profile')->middleware('admin');
 Route::get('/admin/change-password', 'AdminController@change')->name('admin.change')->middleware('admin');
 
 /*User Dropdown*/

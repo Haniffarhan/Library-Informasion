@@ -6,7 +6,7 @@
         <img src="{{asset('logo.png')}}" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
-        <p>Alexander Pierce</p>
+        <p>Sarkom</p>
         <a>ADMIN</a>
       </div>
     </div>
@@ -22,7 +22,7 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="{{ route('admin.profile')}}"><i class="fa fa-circle-o"></i> Profile User</a></li>
+          <li><a href="{{ route('admin.profile', $users)}}"><i class="fa fa-circle-o"></i> Profile User</a></li>
           <li><a href="{{ route('admin.change')}}"><i class="fa fa-circle-o"></i> Change Password</a></li>
         </ul>
       </li>

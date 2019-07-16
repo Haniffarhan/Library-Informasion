@@ -30,10 +30,12 @@ class HomeController extends Controller
                 return redirect()->route('admin.profile', ['id_user' => $id_user]);
                 break;
             case 2:
-                return view('pages.headstaff.profile.profileuser');
+                $id_user = Auth::user()->id_user;
+                return redirect()->route('headstaff.profile', ['id_user' => $id_user]);
                 break;
             case 3:
-                return view('pages.user.profile.profileuser');
+                $id_user = Auth::user()->id_user;
+                return redirect()->route('user.profile', ['id_user' => $id_user]);
                 break;
             default:
                 $this->redirectTo = '/login';

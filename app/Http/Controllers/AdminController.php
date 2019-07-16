@@ -10,25 +10,27 @@ class AdminController extends Controller
 {
     public function profile($id_user)
     {
-        $users = User::find($id_user);
-        return view('pages.admin.profile.profileuser', ['users' => $users]);
-        // dd($users);
+        $id_user = User::find($id_user);
+        return view('pages.admin.profile.profileuser', ['id_user' => $id_user]);
     }
 
-    public function change()
+    public function change($id_user)
     {
-        return view('pages.admin.profile.changepassword');
+        $id_user = User::find($id_user);
+        return view('pages.admin.profile.changepassword', ['id_user' => $id_user]);
     }
 
     /* User Dropdown */
 
-    public function forminputuser()
+    public function forminputuser($id_user)
     {
-        return view('pages.admin.user.inputuser');
+        $id_user = User::find($id_user);
+        return view('pages.admin.user.inputuser', ['id_user' => $id_user]);
     }
 
-    public function inputuser(Request $request)
+    public function inputuser(Request $request, $id_user)
     {
+        $id_user = User::find($id_user);
         DB::table('users')->insert([
             'name' => $request->name,
             'gender' => $request->gender,
@@ -46,10 +48,11 @@ class AdminController extends Controller
         return redirect('/admin/list-user');
     }
 
-    public function listuser()
+    public function listuser($id_user)
     {
+        $id_user = User::find($id_user);
         $users = DB::table('users')->get();
-        return view('pages.admin.user.listuser', ['users' => $users]);
+        return view('pages.admin.user.listuser', ['users' => $users, 'id_user' => $id_user]);
     }
 
     public function edituser($id_user)
@@ -90,13 +93,15 @@ class AdminController extends Controller
 
     /* End User Dropdown */
 
-    public function forminputbook()
+    public function forminputbook($id_user)
     {
-        return view('pages.admin.book.inputbook');
+        $id_user = User::find($id_user);
+        return view('pages.admin.book.inputbook', ['id_user' => $id_user]);
     }
 
-    public function inputbook(Request $request)
+    public function inputbook(Request $request, $id_user)
     {
+        $id_user = User::find($id_user);
         DB::table('books')->insert([
             'book_name' => $request->book_name,
             'author' => $request->author,
@@ -104,18 +109,20 @@ class AdminController extends Controller
             'description' => $request->description,
         ]);
 
-        return redirect('/admin/list-book');
+        return redirect('/admin/list-book/{id_user}');
     }
 
-    public function listbook()
+    public function listbook($id_user)
     {
+        $id_user = User::find($id_user);
         $books = DB::table('books')->get();
-        return view('pages.admin.book.listbook', ['books' => $books]);
+        return view('pages.admin.book.listbook', ['books' => $books, 'id_user' => $id_user]);
     }
 
-    public function forminputborrow()
+    public function forminputborrow($id_user)
     {
-        return view('pages.admin.borrow.inputborrow');
+        $id_user = User::find($id_user);
+        return view('pages.admin.borrow.inputborrow', ['id_user' => $id_user]);
     }
 
     public function inputborrow(Request $request)
@@ -134,9 +141,10 @@ class AdminController extends Controller
         return redirect('/admin/list-borrow');
     }
 
-    public function listborrow()
+    public function listborrow($id_user)
     {
+        $id_user = User::find($id_user);
         $borrows = DB::table('borrows')->get();
-        return view('pages.admin.borrow.listborrow', ['borrows' => $borrows]);
+        return view('pages.admin.borrow.listborrow', ['borrows' => $borrows, 'id_user' => $id_user]);
     }
 }

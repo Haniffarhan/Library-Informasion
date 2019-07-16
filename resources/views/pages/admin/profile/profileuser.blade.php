@@ -23,56 +23,56 @@
          <label for="inputEmail3" class="col-sm-2 control-label">ID User</label>
 
          <div class="col-sm-10">
-           <input type="text" class="form-control" id="inputEmail3" placeholder="ID User"value="{{ $users->id_user }}">
+           <input type="text" class="form-control" id="inputEmail3" placeholder="ID User" value="{{ $id_user->id_user }}">
          </div>
        </div>
        <div class="form-group">
          <label for="inputPassword3" class="col-sm-2 control-label">Nama User</label>
 
          <div class="col-sm-10">
-           <input type="text" class="form-control" id="inputPassword3" placeholder="Nama User" value="{{ $users->name }}">
+           <input type="text" class="form-control" id="inputPassword3" placeholder="Nama User" value="{{ $id_user->name }}">
          </div>
        </div>
        <div class="form-group">
          <label for="inputPassword3" class="col-sm-2 control-label">Gender</label>
 
          <div class="col-sm-10">
-           <input type="text" class="form-control" id="inputPassword3" placeholder="Gender" value="{{ $users->gender }}">
+           <input type="text" class="form-control" id="inputPassword3" placeholder="Gender" value="{{ $id_user->gender }}">
          </div>
        </div>
        <div class="form-group">
          <label for="inputPassword3" class="col-sm-2 control-label">Born Place</label>
 
          <div class="col-sm-10">
-           <input type="text" class="form-control" id="inputPassword3" placeholder="Born Place" value="{{ $users->born_place }}">
+           <input type="text" class="form-control" id="inputPassword3" placeholder="Born Place" value="{{ $id_user->born_place }}">
          </div>
        </div>
        <div class="form-group">
          <label for="inputPassword3" class="col-sm-2 control-label">Born Date</label>
 
          <div class="col-sm-10">
-           <input type="text" class="form-control" id="inputPassword3" placeholder="Born Date" value="{{ $users->born_date_year }} / {{ $users->born_date_month }} / {{ $users->born_date_day }}">
+           <input type="text" class="form-control" id="inputPassword3" placeholder="Born Date" value="{{ $id_user->born_date_year }} / {{ $id_user->born_date_month }} / {{ $id_user->born_date_day }}">
          </div>
        </div>
        <div class="form-group">
          <label for="inputPassword3" class="col-sm-2 control-label">Address</label>
 
          <div class="col-sm-10">
-           <textarea class="form-control" rows="3" placeholder="Address">{{ $users->address }}</textarea>
+           <textarea class="form-control" rows="3" placeholder="Address">{{ $id_user->address }}</textarea>
          </div>
        </div>
        <div class="form-group">
          <label for="inputPassword3" class="col-sm-2 control-label">Phone Number</label>
 
          <div class="col-sm-10">
-           <input type="text" class="form-control" id="inputPassword3" placeholder="Phone Number" value="{{ $users->phone_number }}">
+           <input type="text" class="form-control" id="inputPassword3" placeholder="Phone Number" value="{{ $id_user->phone_number }}">
          </div>
        </div>
        <div class="form-group">
          <label for="inputPassword3" class="col-sm-2 control-label">Email</label>
 
          <div class="col-sm-10">
-           <input type="text" class="form-control" id="inputPassword3" placeholder="Email" value="{{ $users->email }}">
+           <input type="text" class="form-control" id="inputPassword3" placeholder="Email" value="{{ $id_user->email }}">
          </div>
        </div>
      </div>

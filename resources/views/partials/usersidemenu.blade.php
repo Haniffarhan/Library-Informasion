@@ -22,8 +22,8 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="{{ route('user.profile')}}"><i class="fa fa-circle-o"></i> Profile User</a></li>
-          <li><a href="{{ route('user.change')}}"><i class="fa fa-circle-o"></i> Change Password</a></li>
+          <li><a href="{{ route('user.profile', $id_user)}}"><i class="fa fa-circle-o"></i> Profile User</a></li>
+          <li><a href="{{ route('user.change', $id_user)}}"><i class="fa fa-circle-o"></i> Change Password</a></li>
         </ul>
       </li>
       <li class="treeview">
@@ -34,8 +34,8 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="{{ route('user.borrowing')}}"><i class="fa fa-circle-o"></i> Borrowing Books</a></li>
-          <li><a href="{{ route('user.borrowinghistory')}}"><i class="fa fa-circle-o"></i> Borrowing History</a></li>
+          <li><a href="{{ route('user.borrowing', $id_user)}}"><i class="fa fa-circle-o"></i> Borrowing Books</a></li>
+          <li><a href="{{ route('user.borrowinghistory', $id_user)}}"><i class="fa fa-circle-o"></i> Borrowing History</a></li>
         </ul>
       </li>
     </ul>

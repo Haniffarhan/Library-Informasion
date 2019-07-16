@@ -22,8 +22,8 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="{{ route('admin.profile', $users)}}"><i class="fa fa-circle-o"></i> Profile User</a></li>
-          <li><a href="{{ route('admin.change')}}"><i class="fa fa-circle-o"></i> Change Password</a></li>
+          <li><a href="{{ route('admin.profile', $id_user)}}"><i class="fa fa-circle-o"></i> Profile User</a></li>
+          <li><a href="{{ route('admin.change', $id_user)}}"><i class="fa fa-circle-o"></i> Change Password</a></li>
         </ul>
       </li>
       <li class="treeview">
@@ -34,8 +34,8 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="{{ route('admin.forminputuser')}}"><i class="fa fa-circle-o"></i> Input User</a></li>
-          <li><a href="{{ route('admin.listuser')}}"><i class="fa fa-circle-o"></i> List User</a></li>
+          <li><a href="{{ route('admin.forminputuser', $id_user)}}"><i class="fa fa-circle-o"></i> Input User</a></li>
+          <li><a href="{{ route('admin.listuser', $id_user)}}"><i class="fa fa-circle-o"></i> List User</a></li>
         </ul>
       </li>
       <li class="treeview">
@@ -46,8 +46,8 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="{{ route('admin.forminputbook')}}"><i class="fa fa-circle-o"></i> Input Book</a></li>
-          <li><a href="{{ route('admin.listbook')}}"><i class="fa fa-circle-o"></i> List Book</a></li>
+          <li><a href="{{ route('admin.forminputbook', $id_user)}}"><i class="fa fa-circle-o"></i> Input Book</a></li>
+          <li><a href="{{ route('admin.listbook', $id_user)}}"><i class="fa fa-circle-o"></i> List Book</a></li>
         </ul>
       </li>
       <li class="treeview">
@@ -58,8 +58,8 @@
           </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="{{ route('admin.forminputborrow')}}"><i class="fa fa-circle-o"></i> Input Borrowing</a></li>
-          <li><a href="{{ route('admin.listborrow')}}"><i class="fa fa-circle-o"></i> List Borrowing</a></li>
+          <li><a href="{{ route('admin.forminputborrow', $id_user)}}"><i class="fa fa-circle-o"></i> Input Borrowing</a></li>
+          <li><a href="{{ route('admin.listborrow', $id_user)}}"><i class="fa fa-circle-o"></i> List Borrowing</a></li>
         </ul>
       </li>
     </ul>

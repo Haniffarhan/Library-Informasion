@@ -15,7 +15,7 @@
      <h3 class="box-title">Input User Form</h3>
    </div>
    <div class="box-body">
-     <form role="form" method="post" action="{{ route('admin.inputuser') }}">
+     <form role="form" method="post" action="{{ route('admin.inputuser', $id_user)}}">
        @csrf
        <div class="form-group">
          <label>Name</label>

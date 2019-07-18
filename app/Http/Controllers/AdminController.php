@@ -28,9 +28,8 @@ class AdminController extends Controller
         return view('pages.admin.user.inputuser', ['id_user' => $id_user]);
     }
 
-    public function inputuser(Request $request, $id_user)
+    public function inputuser(Request $request)
     {
-        $id_user = User::find($id_user);
         DB::table('users')->insert([
             'name' => $request->name,
             'gender' => $request->gender,
@@ -45,7 +44,7 @@ class AdminController extends Controller
             'password' => bcrypt($request->phone_number),
         ]);
 
-        return redirect('/admin/list-user');
+        return redirect('/login');
     }
 
     public function listuser($id_user)
@@ -99,17 +98,16 @@ class AdminController extends Controller
         return view('pages.admin.book.inputbook', ['id_user' => $id_user]);
     }
 
-    public function inputbook(Request $request, $id_user)
+    public function inputbook(Request $request)
     {
-        $id_user = User::find($id_user);
         DB::table('books')->insert([
-            'book_name' => $request->book_name,
+            'book_title' => $request->book_title,
             'author' => $request->author,
             'publisher' => $request->publisher,
             'description' => $request->description,
         ]);
 
-        return redirect('/admin/list-book/{id_user}');
+        return redirect('/login');
     }
 
     public function listbook($id_user)
@@ -138,7 +136,7 @@ class AdminController extends Controller
             'return_date_year' => $request->return_date_year,
         ]);
 
-        return redirect('/admin/list-borrow');
+        return redirect('/login');
     }
 
     public function listborrow($id_user)

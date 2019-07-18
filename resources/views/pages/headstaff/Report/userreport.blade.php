@@ -28,17 +28,33 @@
                <tr role="row">
                  <th>ID User</th>
                  <th>User Name</th>
-                 <th>Created By</th>
-                 <th>Created At</th>
+                 <th>Gender</th>
+                 <th>Born Place</th>
+                 <th>Born Date Day</th>
+                 <th>Born Date Month</th>
+                 <th>Born Date Year</th>
+                 <th>Address</th>
+                 <th>Email</th>
+                 <th>Phone Number</th>
+                 <th>ID Role</th>
                </tr>
              </thead>
              <tbody>
+               @foreach($users as $p)
                <tr>
-                 <td>Gecko</td>
-                 <td>Firefox 1.0</td>
-                 <td>Win 98+ / OSX.2+</td>
-                 <td>Win 98+ / OSX.2+</td>
+                 <td>{{ $p->id_user }}</td>
+                 <td>{{ $p->name }}</td>
+                 <td>{{ $p->gender }}</td>
+                 <td>{{ $p->born_place }}</td>
+                 <td>{{ $p->born_date_day }}</td>
+                 <td>{{ $p->born_date_month }}</td>
+                 <td>{{ $p->born_date_year }}</td>
+                 <td>{{ $p->address }}</td>
+                 <td>{{ $p->email }}</td>
+                 <td>{{ $p->phone_number }}</td>
+                 <td>{{ $p->id_role }}</td>
                </tr>
+               @endforeach
            </table>
          </div>
        </div>

@@ -38,7 +38,6 @@
                  <th>Phone Number</th>
                  <th>ID Role</th>
                  <th>Option</th>
-
                </tr>
              </thead>
              <tbody>

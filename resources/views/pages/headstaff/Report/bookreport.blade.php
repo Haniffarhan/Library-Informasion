@@ -27,22 +27,22 @@
              <thead>
                <tr role="row">
                  <th>ID Book</th>
-                 <th>Book Name</th>
+                 <th>Book Title</th>
                  <th>Author</th>
                  <th>Publisher</th>
-                 <th>Created By</th>
-                 <th>Created At</th>
+                 <th>Description</th>
                </tr>
              </thead>
              <tbody>
+               @foreach($books as $p)
                <tr>
-                 <td>Gecko</td>
-                 <td>Firefox 1.0</td>
-                 <td>Win 98+ / OSX.2+</td>
-                 <td>Win 98+ / OSX.2+</td>
-                 <td>Win 98+ / OSX.2+</td>
-                 <td>Win 98+ / OSX.2+</td>
+                 <td>{{ $p->id_book }}</td>
+                 <td>{{ $p->book_title }}</td>
+                 <td>{{ $p->author }}</td>
+                 <td>{{ $p->publisher }}</td>
+                 <td>{{ $p->description }}</td>
                </tr>
+               @endforeach
            </table>
          </div>
        </div>

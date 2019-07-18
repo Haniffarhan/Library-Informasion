@@ -72,7 +72,6 @@
         Route::get('/admin/form-input-user/{id_user}', 'AdminController@forminputuser')->name('admin.forminputuser')->middleware('admin');
         Route::post('/admin/input-user', 'AdminController@inputuser')->name('admin.inputuser')->middleware('admin');
         Route::get('/admin/list-user/{id_user}', 'AdminController@listuser')->name('admin.listuser')->middleware('admin');
-        Route::get('/admin/edit-user/{id_user}', 'AdminController@edituser')->name('admin.edituser')->middleware('admin');
         Route::put('/admin/update-user/{id_user}', 'AdminController@updateuser')->name('admin.updateuser')->middleware('admin');
 
     /*End User Dropdown*/

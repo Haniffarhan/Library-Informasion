@@ -54,12 +54,6 @@ class AdminController extends Controller
         return view('pages.admin.user.listuser', ['users' => $users, 'id_user' => $id_user]);
     }
 
-    public function edituser($id_user)
-    {
-        $users = User::find($id_user);
-        return view('pages.admin.user.edituser', ['users' => $users]);
-    }
-
     public function updateuser($id_user, Request $request)
     {
         $this->validate($request, [

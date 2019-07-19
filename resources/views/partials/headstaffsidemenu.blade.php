@@ -23,7 +23,6 @@
         </a>
         <ul class="treeview-menu">
           <li><a href="{{ route('headstaff.profile', $id_user)}}"><i class="fa fa-circle-o"></i> Profile User</a></li>
-          <li><a href="{{ route('headstaff.change', $id_user)}}"><i class="fa fa-circle-o"></i> Change Password</a></li>
         </ul>
       </li>
       <li class="treeview">

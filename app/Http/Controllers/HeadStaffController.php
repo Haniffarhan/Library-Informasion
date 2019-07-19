@@ -14,12 +14,6 @@ class HeadStaffController extends Controller
         return view('pages.headstaff.profile.profileuser', ['id_user' => $id_user]);
     }
 
-    public function change($id_user)
-    {
-        $id_user = User::find($id_user);
-        return view('pages.headstaff.profile.changepassword', ['id_user' => $id_user]);
-    }
-
     public function userreport($id_user)
     {
         $id_user = User::find($id_user);

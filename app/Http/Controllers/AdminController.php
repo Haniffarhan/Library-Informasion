@@ -14,12 +14,6 @@ class AdminController extends Controller
         return view('pages.admin.profile.profileuser', ['id_user' => $id_user]);
     }
 
-    public function change($id_user)
-    {
-        $id_user = User::find($id_user);
-        return view('pages.admin.profile.changepassword', ['id_user' => $id_user]);
-    }
-
     /* User Dropdown */
 
     public function forminputuser($id_user)

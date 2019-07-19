@@ -19,37 +19,12 @@
        @csrf
        <div class="form-group">
          <label>ID User</label>
-         <div class="input-group input-group-sm">
-           <input type="text" class="form-control" name="id_user">
-           <span class="input-group-btn">
-             <button type="button" class="btn btn-info btn-flat">Go!</button>
-           </span>
-         </div>
-       </div>
-
-       <div class="form-group">
-         <label>User Name</label>
-         <input type="text" class="form-control" placeholder="Enter Name">
+         <input type="text" class="form-control" name="id_user">
        </div>
 
        <div class="form-group">
          <label>ID Book</label>
-         <div class="input-group input-group-sm">
-           <input type="text" class="form-control" name="id_book">
-           <span class="input-group-btn">
-             <button type="button" class="btn btn-info btn-flat">Go!</button>
-           </span>
-         </div>
-       </div>
-
-       <div class="form-group">
-         <label>Book Name</label>
-         <input type="text" class="form-control" placeholder="Enter Name">
-       </div>
-
-       <div class="form-group">
-         <label>Author</label>
-         <input type="text" class="form-control" placeholder="Enter Name">
+         <input type="text" class="form-control" name="id_book">
        </div>
 
        <div class="form-group">

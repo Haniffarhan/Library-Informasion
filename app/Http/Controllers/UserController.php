@@ -15,12 +15,6 @@ class UserController extends Controller
         return view('pages.user.profile.profileuser', ['id_user' => $id_user]);
     }
 
-    public function change($id_user)
-    {
-        $id_user = User::find($id_user);
-        return view('pages.user.profile.changepassword', ['id_user' => $id_user]);
-    }
-
     public function borrowing($id_user)
     {
         $id_user = User::find($id_user);

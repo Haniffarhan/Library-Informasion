@@ -26,4 +26,18 @@ class AdminAPIController extends Controller
 
         return response()->json($data);
     }
+
+    public function listbookapi()
+    {
+        $data = DB::table('books')->get();
+
+        return response()->json($data);
+    }
+
+    public function listborrowapi()
+    {
+        $data = DB::table('borrows')->get();
+
+        return response()->json($data);
+    }
 }

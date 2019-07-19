@@ -48,36 +48,6 @@ class AdminController extends Controller
         return view('pages.admin.user.listuser', ['users' => $users, 'id_user' => $id_user]);
     }
 
-    public function updateuser($id_user, Request $request)
-    {
-        $this->validate($request, [
-            'name' => 'required',
-            'gender' => 'required',
-            'born_place' => 'required',
-            'born_date_day' => 'required',
-            'born_date_month' => 'required',
-            'born_date_year' => 'required',
-            'address' => 'required',
-            'email' => 'required',
-            'phone_number' => 'required',
-            'id_role' => 'required',
-            'password' => 'required',
-        ]);
-
-        $users = User::find($id_user);
-        $users->name = $request->name;
-        $users->gender = $request->gender;
-        $users->born_place = $request->born_place;
-        $users->born_date_day = $request->born_date_day;
-        $users->born_date_month = $request->born_date_month;
-        $users->born_date_year = $request->born_date_year;
-        $users->address = $request->address;
-        $users->email = $request->email;
-        $users->phone_number = $request->phone_number;
-        $users->save();
-        return redirect('admin.listuser');
-    }
-
     /* End User Dropdown */
 
     public function forminputbook($id_user)

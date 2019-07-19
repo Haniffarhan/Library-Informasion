@@ -30,9 +30,7 @@
                  <th>User Name</th>
                  <th>Gender</th>
                  <th>Born Place</th>
-                 <th>Born Date Day</th>
-                 <th>Born Date Month</th>
-                 <th>Born Date Year</th>
+                 <th>Born Date</th>
                  <th>Address</th>
                  <th>Email</th>
                  <th>Phone Number</th>
@@ -46,9 +44,7 @@
                  <td>{{ $p->name }}</td>
                  <td>{{ $p->gender }}</td>
                  <td>{{ $p->born_place }}</td>
-                 <td>{{ $p->born_date_day }}</td>
-                 <td>{{ $p->born_date_month }}</td>
-                 <td>{{ $p->born_date_year }}</td>
+                 <td>{{ $p->born_date_year }} / {{ $p->born_date_month }} / {{ $p->born_date_day }}</td>
                  <td>{{ $p->address }}</td>
                  <td>{{ $p->email }}</td>
                  <td>{{ $p->phone_number }}</td>

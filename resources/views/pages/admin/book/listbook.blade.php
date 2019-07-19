@@ -31,7 +31,6 @@
                  <th>Author</th>
                  <th>Publisher</th>
                  <th>Description</th>
-                 <th>Option</th>
                </tr>
              </thead>
              <tbody>
@@ -42,11 +41,6 @@
                  <td>{{ $p->author }}</td>
                  <td>{{ $p->publisher }}</td>
                  <td>{{ $p->description }}</td>
-                 <td>
-                   <a class="btn btn-warning" href="#/Edit">Edit</a>
-                   |
-                   <a  class="btn btn-danger" href="#/Delete">Delete</a>
-                 </td>
                </tr>
                @endforeach
              </tbody>

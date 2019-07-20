@@ -23,28 +23,30 @@
        </div>
        <div class="row">
          <div class="col-sm-12">
-           <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
-             <thead>
-               <tr role="row">
-                 <th>ID Book</th>
-                 <th>Book Title</th>
-                 <th>Author</th>
-                 <th>Publisher</th>
-                 <th>Description</th>
-               </tr>
-             </thead>
-             <tbody>
-               @foreach($books as $p)
-               <tr>
-                 <td>{{ $p->id_book }}</td>
-                 <td>{{ $p->book_title }}</td>
-                 <td>{{ $p->author }}</td>
-                 <td>{{ $p->publisher }}</td>
-                 <td>{{ $p->description }}</td>
-               </tr>
-               @endforeach
-             </tbody>
-           </table>
+           <div class="table-responsive">
+             <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+               <thead>
+                 <tr role="row">
+                   <th>ID Book</th>
+                   <th>Book Title</th>
+                   <th>Author</th>
+                   <th>Publisher</th>
+                   <th>Description</th>
+                 </tr>
+               </thead>
+               <tbody>
+                 @foreach($books as $p)
+                 <tr>
+                   <td>{{ $p->id_book }}</td>
+                   <td>{{ $p->book_title }}</td>
+                   <td>{{ $p->author }}</td>
+                   <td>{{ $p->publisher }}</td>
+                   <td>{{ $p->description }}</td>
+                 </tr>
+                 @endforeach
+               </tbody>
+             </table>
+           </div>
          </div>
        </div>
      </div>

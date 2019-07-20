@@ -23,28 +23,30 @@
        </div>
        <div class="row">
          <div class="col-sm-12">
-           <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
-             <thead>
-               <tr role="row">
-                 <th>ID Borrow</th>
-                 <th>ID Book</th>
-                 <th>ID User</th>
-                 <th>Borrow Date</th>
-                 <th>Return Date</th>
-               </tr>
-               </tr>
-             </thead>
-             <tbody>
-               @foreach($borrows as $p)
-               <tr>
-                 <td>{{ $p->id_borrow }}</td>
-                 <td>{{ $p->id_book }}</td>
-                 <td>{{ $p->id_user }}</td>
-                 <td>{{ $p->borrow_date_year }} / {{ $p->borrow_date_month }} / {{ $p->borrow_date_day }}</td>
-                 <td>{{ $p->return_date_year }} / {{ $p->return_date_month }} / {{ $p->return_date_day }}</td>
-               </tr>
-               @endforeach
-           </table>
+           <div class="table-responsive">
+             <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+               <thead>
+                 <tr role="row">
+                   <th>ID Borrow</th>
+                   <th>ID Book</th>
+                   <th>ID User</th>
+                   <th>Borrow Date</th>
+                   <th>Return Date</th>
+                 </tr>
+                 </tr>
+               </thead>
+               <tbody>
+                 @foreach($borrows as $p)
+                 <tr>
+                   <td>{{ $p->id_borrow }}</td>
+                   <td>{{ $p->id_book }}</td>
+                   <td>{{ $p->id_user }}</td>
+                   <td>{{ $p->borrow_date_year }} / {{ $p->borrow_date_month }} / {{ $p->borrow_date_day }}</td>
+                   <td>{{ $p->return_date_year }} / {{ $p->return_date_month }} / {{ $p->return_date_day }}</td>
+                 </tr>
+                 @endforeach
+             </table>
+           </div>
          </div>
        </div>
      </div>

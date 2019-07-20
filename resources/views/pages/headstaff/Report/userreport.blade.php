@@ -23,35 +23,37 @@
        </div>
        <div class="row">
          <div class="col-sm-12">
-           <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
-             <thead>
-               <tr role="row">
-                 <th>ID User</th>
-                 <th>User Name</th>
-                 <th>Gender</th>
-                 <th>Born Place</th>
-                 <th>Born Date</th>
-                 <th>Address</th>
-                 <th>Email</th>
-                 <th>Phone Number</th>
-                 <th>ID Role</th>
-               </tr>
-             </thead>
-             <tbody>
-               @foreach($users as $p)
-               <tr>
-                 <td>{{ $p->id_user }}</td>
-                 <td>{{ $p->name }}</td>
-                 <td>{{ $p->gender }}</td>
-                 <td>{{ $p->born_place }}</td>
-                 <td>{{ $p->born_date_year }} / {{ $p->born_date_month }} / {{ $p->born_date_day }}</td>
-                 <td>{{ $p->address }}</td>
-                 <td>{{ $p->email }}</td>
-                 <td>{{ $p->phone_number }}</td>
-                 <td>{{ $p->id_role }}</td>
-               </tr>
-               @endforeach
-           </table>
+           <div class="table-responsive">
+             <table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+               <thead>
+                 <tr role="row">
+                   <th>ID User</th>
+                   <th>User Name</th>
+                   <th>Gender</th>
+                   <th>Born Place</th>
+                   <th>Born Date</th>
+                   <th>Address</th>
+                   <th>Email</th>
+                   <th>Phone Number</th>
+                   <th>ID Role</th>
+                 </tr>
+               </thead>
+               <tbody>
+                 @foreach($users as $p)
+                 <tr>
+                   <td>{{ $p->id_user }}</td>
+                   <td>{{ $p->name }}</td>
+                   <td>{{ $p->gender }}</td>
+                   <td>{{ $p->born_place }}</td>
+                   <td>{{ $p->born_date_year }} / {{ $p->born_date_month }} / {{ $p->born_date_day }}</td>
+                   <td>{{ $p->address }}</td>
+                   <td>{{ $p->email }}</td>
+                   <td>{{ $p->phone_number }}</td>
+                   <td>{{ $p->id_role }}</td>
+                 </tr>
+                 @endforeach
+             </table>
+           </div>
          </div>
        </div>
      </div>

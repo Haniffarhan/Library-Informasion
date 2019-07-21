@@ -106,3 +106,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/splash', 'SplashController@show')->name('splash');
+Route::get('/next', 'SplashController@next')->name('next');

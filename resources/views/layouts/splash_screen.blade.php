@@ -2396,7 +2396,7 @@
             </svg>
         </div>
     </div>
-    <p id="replay"><a href="{{ route('next')}}" class="btn btn-primary btn-lg">Next</a></p>
+    <p id="replay"><a href="{{ route('next')}}" class="btn btn-primary btn-lg">Click Here to Next Page</a></p>
 
 
 </body>

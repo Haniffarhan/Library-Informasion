@@ -21,6 +21,7 @@
          <button type="submit" class="login100-form-btn">
            Login
          </button>
+         <p>Please use your phone number for password</p>
        </div>
 
      </form>

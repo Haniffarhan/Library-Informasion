@@ -1,3 +1,5 @@
+Untuk menjalankan server ada pada baris terakhir
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
@@ -70,3 +72,16 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+Tambahan untuk menjalankan server
+-ketik "Composer install" pada command prompt yang tertuju pada folder project
+-ubah ".env.example" menjadi ".env"
+-ketik pada command prompt "php artisan key:generate"
+-buat pada database pada phpmyadmin dengan nama "library-information"
+-ubah nama database pada ".env" menjadi "library-information"
+-ubah user name database pada ".env" sesuai user name phpmyadmin yang digunakan
+-ubah password database pada ".env" sesuai password phpmyadmin yangdigunakan
+-kemudian ketik "php artisan migrate" pada command prompt
+-lalu ketik "php artisan db:seed" pada command prompt
+-lalu ketik "php artisan serve --host='alamat ip pada komputer yang digunakan' --port=8000
+-kemudian ketik pada browser alamat ip komputer seperti "172.17.10.12:8000"

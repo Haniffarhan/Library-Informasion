@@ -24,15 +24,20 @@
             <ul class="dropdown-menu">
               <!-- <li><a href="#"><i class="fa fa-sign-out"></i>Logout</a></li> -->
               <li>
+                <a class="fa fa-download" href="https://drive.google.com/open?id=1ha1AToUxKqgoWdzflRhg0r09LAO7s_Ff">
+                  {{ __('Download APK') }}
+                </a>
+              </li>
+              <li>
                 <a class="fa fa-sign-out" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
-              </a>
+                  {{ __('Logout') }}
+                </a>
 
-              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-              </form>
-            </li>
-              
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  @csrf
+                </form>
+              </li>
+
             </ul>
       </div>
     </nav>
